@@ -14,19 +14,24 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        children: <Widget>[
-          RoundedButton(
-            onPressed: null,
-            title: 'button 1',
-            colour: Colors.blue,
-          ),
-          RoundedButton(
-            onPressed: null,
-            title: 'button 2',
-            colour: Colors.blue,
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 25.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            RoundedButton(
+              onPressed: null,
+              title: 'Login',
+              colour: Colors.blue,
+            ),
+            RoundedButton(
+              onPressed: null,
+              title: 'Register',
+              colour: Colors.blue,
+            ),
+          ],
+        ),
       ),
     );
   }
