@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'login_screen.dart';
+import 'registration_screen.dart';
 import 'rounded_button.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -22,12 +24,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             RoundedButton(
-              onPressed: null,
+              onPressed: () =>
+                  Navigator.of(context).pushReplacementNamed(LoginScreen.id),
               title: 'Login',
               colour: Colors.blue,
             ),
             RoundedButton(
-              onPressed: null,
+              onPressed: () => Navigator.of(context)
+                  .pushReplacementNamed(RegistrationScreen.id),
               title: 'Register',
               colour: Colors.blue,
             ),
