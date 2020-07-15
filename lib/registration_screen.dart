@@ -1,10 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'login_screen.dart';
 import 'rounded_button.dart';
 
-//import 'package:firebase_auth/firebase_auth.dart';
 class RegistrationScreen extends StatefulWidget {
   static String id = 'registration_screen';
   @override
@@ -12,10 +12,10 @@ class RegistrationScreen extends StatefulWidget {
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
-//  final _auth = FirebaseAuth.instance;
-//  String email;
-//  String password;
-//  String name;
+  final _auth = FirebaseAuth.instance;
+  String email;
+  String password;
+  String name;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -60,7 +60,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   letterSpacing: 4.0,
                 ),
                 onChanged: (value) {
-//                  name = value;
+                  name = value;
                 },
                 decoration: InputDecoration(
                   hintText: 'Full Name',
@@ -75,7 +75,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 ),
                 keyboardType: TextInputType.emailAddress,
                 onChanged: (value) {
-//                  email = value;
+                  email = value;
                 },
                 decoration: InputDecoration(
                   hintText: 'Email',
@@ -89,9 +89,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   letterSpacing: 4.0,
                 ),
                 obscureText: true,
-                keyboardType: TextInputType.emailAddress,
+                keyboardType: TextInputType.text,
                 onChanged: (value) {
-//                  password = value;
+                  password = value;
                 },
                 decoration: InputDecoration(
                   hintText: 'Password',
@@ -103,16 +103,15 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 colour: Colors.blueAccent,
                 title: 'Register',
                 onPressed: () async {
-//                  try {
-//                    final newUser =
-//                    await _auth.createUserWithEmailAndPassword(
-//                        email: email, password: password);
-//                    if (newUser != null) {
-//                      print('Registration Successful!');
-//                    }
-//                  } catch (e) {
-//                    print(e);
-//                  }
+                  try {
+                    final newUser = await _auth.createUserWithEmailAndPassword(
+                        email: email, password: password);
+                    if (newUser != null) {
+                      print('Registration Successful!');
+                    }
+                  } catch (e) {
+                    print(e);
+                  }
                 },
               ),
             ),
