@@ -1,8 +1,8 @@
-import 'package:flutter_facebook_login/flutter_facebook_login.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:http/http.dart' as http;
 import 'dart:convert' as JSON;
 
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_facebook_login/flutter_facebook_login.dart';
+import 'package:http/http.dart' as http;
 
 String email;
 String password;

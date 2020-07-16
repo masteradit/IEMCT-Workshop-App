@@ -1,10 +1,11 @@
-import 'registration_screen.dart';
-import 'package:flutter/material.dart';
-import 'rounded_button.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'google.dart';
-import 'facebook.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'facebook.dart';
+import 'google.dart';
+import 'registration_screen.dart';
+import 'rounded_button.dart';
 
 class LoginScreen extends StatefulWidget {
   static String id = 'login_screen';
